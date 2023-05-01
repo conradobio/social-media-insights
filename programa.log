@@ -1,0 +1,8 @@
+2023-05-01 13:48:05,511 - INFO - Argumentos : ('details', 'ic.campinas')
+2023-05-01 13:48:05,511 - INFO - Extracting data from https://www.instagram.com/ic.campinas/
+2023-05-01 13:48:49,685 - INFO - Argumentos : ('details', 'ic.campinas')
+2023-05-01 13:48:49,685 - INFO - Extracting data from https://www.instagram.com/ic.campinas/
+2023-05-01 13:49:31,445 - INFO - Loaded data to ./data/ic-campinas/ic_campinas-details-2023-05-01.json
+2023-05-01 13:50:02,000 - INFO - Argumentos : ('posts', 'ic.campinas')
+2023-05-01 13:50:02,000 - INFO - Extracting data from https://www.instagram.com/ic.campinas/
+2023-05-01 13:57:22,454 - INFO - Loaded data to ./data/ic-campinas/ic_campinas-posts-2023-05-01.json

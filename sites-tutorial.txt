@@ -1,0 +1,11 @@
+https://towardsdatascience.com/discover-insights-from-your-instagram-business-account-with-facebook-graph-api-and-python-81d20ee2e751
+
+https://drgabrielharris.medium.com/python-how-getting-facebook-data-and-insights-using-facebook-sdk-9de14d3c12fb
+
+https://drgabrielharris.medium.com/python-how-making-facebook-api-calls-using-facebook-sdk-ea18bec973c8
+
+https://superface.ai/blog/instagram-account-id
+
+https://www.youtube.com/watch?v=euAWvO_es6s&list=PL0glhsZ01I-BAFwPmQBWMNqUDnkSlOR6r&index=13
+
+https://blog.devgenius.io/how-to-build-a-scraping-tool-for-linkedin-in-7-minutes-tool-data-science-csv-selenium-beautifulsoup-python-a673f12ac579

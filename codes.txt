@@ -1,0 +1,11 @@
+python3 src/apify-api.py \
+    --type=details \
+    --account=ic.campinas
+
+python3 src/apify-api.py \
+    --type=posts \
+    --account=ic.campinas
+
+python3 src/apify-api.py \
+    --type=posts \
+    --account=ic.saoobernardo

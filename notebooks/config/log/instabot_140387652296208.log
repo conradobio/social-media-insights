@@ -1,0 +1,42 @@
+2023-04-08 16:11:38,324 - instabot version: 0.117.0 (bot) - INFO - Instabot version: 0.117.0 Started
+2023-04-08 16:11:38,325 - instabot version: 0.117.0 (bot) - DEBUG - Bot imported from /home/conrado/repos/Pessoal/social-media-insights/.venv/lib/python3.10/site-packages/instabot/bot/bot.py
+2023-04-08 16:11:38,326 - instabot version: 0.117.0 (api_login) - INFO - Not yet logged in starting: PRE-LOGIN FLOW!
+2023-04-08 16:11:38,790 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/get_prefill_candidates/ returned response: <Response [200]>
+2023-04-08 16:11:39,159 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: qe/sync/ returned response: <Response [200]>
+2023-04-08 16:11:39,546 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: launcher/sync/ returned response: <Response [200]>
+2023-04-08 16:11:39,869 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/contact_point_prefill/ returned response: <Response [200]>
+2023-04-08 16:11:44,255 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/login/ returned response: <Response [400]>
+2023-04-08 16:11:44,255 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message":"challenge_required","challenge":{"url":"https://i.instagram.com/challenge/AXHg-vHJPLiWKF8C5enxKYg3ALIEYoOKzAsWxbrKluIs0IfNXGbdm5zQ9reF_swV9C4p/AfyEC3XggAUx7t0k74SjgWAhwcAREBbb0O1VIleXtZJHxcP8pFTohpcBGyjAlvQbKe0Cqj5y7DX7BA/","api_path":"/challenge/AXHg-vHJPLiWKF8C5enxKYg3ALIEYoOKzAsWxbrKluIs0IfNXGbdm5zQ9reF_swV9C4p/AfyEC3XggAUx7t0k74SjgWAhwcAREBbb0O1VIleXtZJHxcP8pFTohpcBGyjAlvQbKe0Cqj5y7DX7BA/","hide_webview_header":true,"lock":true,"logout":false,"native_flow":true,"flow_render_type":0},"status":"fail","error_type":"checkpoint_challenge_required"}'
+2023-04-08 16:11:44,255 - instabot version: 0.117.0 (api) - ERROR - Request returns 400 error!
+2023-04-08 16:11:44,256 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: challenge_required
+2023-04-08 16:11:44,257 - instabot version: 0.117.0 (api) - INFO - Error type: checkpoint_challenge_required
+2023-04-08 16:11:54,396 - instabot version: 0.117.0 (bot) - INFO - Instabot version: 0.117.0 Started
+2023-04-08 16:11:54,397 - instabot version: 0.117.0 (bot) - DEBUG - Bot imported from /home/conrado/repos/Pessoal/social-media-insights/.venv/lib/python3.10/site-packages/instabot/bot/bot.py
+2023-04-08 16:11:54,399 - instabot version: 0.117.0 (api_login) - INFO - Not yet logged in starting: PRE-LOGIN FLOW!
+2023-04-08 16:11:54,803 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/get_prefill_candidates/ returned response: <Response [200]>
+2023-04-08 16:11:55,831 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: qe/sync/ returned response: <Response [200]>
+2023-04-08 16:11:56,213 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: launcher/sync/ returned response: <Response [200]>
+2023-04-08 16:11:56,544 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/contact_point_prefill/ returned response: <Response [200]>
+2023-04-08 16:11:57,970 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/login/ returned response: <Response [400]>
+2023-04-08 16:11:57,970 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message":"The password you entered is incorrect. Please try again.","status":"fail","error_title":"Incorrect password","buttons":[{"title":"OK","action":"dismiss"}],"invalid_credentials":true,"exception_name":"UserInvalidCredentials","error_type":"bad_password"}'
+2023-04-08 16:11:57,970 - instabot version: 0.117.0 (api) - ERROR - Request returns 400 error!
+2023-04-08 16:11:57,971 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: The password you entered is incorrect. Please try again.
+2023-04-08 16:11:57,972 - instabot version: 0.117.0 (api) - INFO - Error type: bad_password
+2023-04-08 16:11:57,973 - instabot version: 0.117.0 (api) - ERROR - Failed to login go to instagram and change your password
+2023-04-08 16:11:57,973 - instabot version: 0.117.0 (api) - INFO - Username or password is incorrect.
+2023-04-08 16:12:11,410 - instabot version: 0.117.0 (bot) - INFO - Instabot version: 0.117.0 Started
+2023-04-08 16:12:11,411 - instabot version: 0.117.0 (bot) - DEBUG - Bot imported from /home/conrado/repos/Pessoal/social-media-insights/.venv/lib/python3.10/site-packages/instabot/bot/bot.py
+2023-04-08 16:12:57,724 - instabot version: 0.117.0 (bot) - INFO - Instabot version: 0.117.0 Started
+2023-04-08 16:12:57,725 - instabot version: 0.117.0 (bot) - DEBUG - Bot imported from /home/conrado/repos/Pessoal/social-media-insights/.venv/lib/python3.10/site-packages/instabot/bot/bot.py
+2023-04-08 16:12:57,726 - instabot version: 0.117.0 (api_login) - INFO - Not yet logged in starting: PRE-LOGIN FLOW!
+2023-04-08 16:13:00,986 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/get_prefill_candidates/ returned response: <Response [200]>
+2023-04-08 16:13:01,628 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: qe/sync/ returned response: <Response [200]>
+2023-04-08 16:13:02,090 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: launcher/sync/ returned response: <Response [200]>
+2023-04-08 16:13:02,489 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/contact_point_prefill/ returned response: <Response [200]>
+2023-04-08 16:13:04,047 - instabot version: 0.117.0 (api) - DEBUG - POST to endpoint: accounts/login/ returned response: <Response [400]>
+2023-04-08 16:13:04,047 - instabot version: 0.117.0 (api) - DEBUG - Responsecode indicates error; response content: b'{"message":"The password you entered is incorrect. Please try again.","status":"fail","error_title":"Incorrect password","buttons":[{"title":"OK","action":"dismiss"}],"invalid_credentials":true,"exception_name":"UserInvalidCredentials","error_type":"bad_password"}'
+2023-04-08 16:13:04,047 - instabot version: 0.117.0 (api) - ERROR - Request returns 400 error!
+2023-04-08 16:13:04,048 - instabot version: 0.117.0 (api) - INFO - Instagram's error message: The password you entered is incorrect. Please try again.
+2023-04-08 16:13:04,050 - instabot version: 0.117.0 (api) - INFO - Error type: bad_password
+2023-04-08 16:13:04,051 - instabot version: 0.117.0 (api) - ERROR - Failed to login go to instagram and change your password
+2023-04-08 16:13:04,052 - instabot version: 0.117.0 (api) - INFO - Username or password is incorrect.
