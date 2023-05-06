@@ -16,7 +16,7 @@ import sys
 import os
 
 from dotenv import load_dotenv
-load_dotenv('.env')
+load_dotenv('./social-media-insights/.env')
 
 APIFY_TOKEN = os.getenv('APIFY_TOKEN')
 AWS_DEFAULT_REGION = os.getenv("AWS_DEFAULT_REGION") 
@@ -84,7 +84,7 @@ def pull_data_api(client, type, account, date):
     
     logging.info(f'Data Extracted - {len(items)}')
 
-    file_path = f"./data/ic-{folder}/ic_{folder}-{type}-{date}.json"
+    file_path = f"./social-media-insights/data/ic-{folder}/ic_{folder}-{type}-{date}.json"
     with open(file_path, 'w') as f:
         f.write(json.dumps(items))
     logging.info(f'Loaded data to {file_path}')
@@ -115,7 +115,7 @@ def load_s3(file_path, bucket_name, type, account, today):
 if __name__ == "__main__":
 
     logging.basicConfig(level=logging.INFO, 
-                filename="./logs/logs.log", 
+                filename="./social-media-insights/logs/logs.log", 
                 format="%(asctime)s - %(levelname)s - %(message)s")
 
     parser = argparse.ArgumentParser(description='Extract Data from Instagram')

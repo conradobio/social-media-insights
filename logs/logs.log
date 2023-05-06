@@ -52,3 +52,157 @@
 2023-05-06 08:07:07,302 - INFO - Connected to instagram-raw
 2023-05-06 08:07:07,302 - INFO - Saving files to S3
 2023-05-06 08:07:07,746 - INFO - Saved file to S3
+2023-05-06 11:16:01,519 - INFO - Argumentos : ('details', 'ic.campinas')
+2023-05-06 11:16:01,519 - INFO - Extracting data from https://www.instagram.com/ic.campinas/
+2023-05-06 11:16:13,578 - INFO - Data Extracted - 1
+2023-05-06 11:16:13,580 - INFO - Loaded data to ./data/ic-campinas/ic_campinas-details-2023-05-06.json
+2023-05-06 11:16:13,580 - INFO - Connecting to S3
+2023-05-06 11:16:13,720 - INFO - Connected to instagram-raw
+2023-05-06 11:16:13,720 - INFO - Saving files to S3
+2023-05-06 11:16:13,886 - INFO - Saved file to S3
+2023-05-06 11:31:38,478 - INFO - Argumentos : ('details', 'ic.campinas')
+2023-05-06 11:31:38,479 - INFO - Extracting data from https://www.instagram.com/ic.campinas/
+2023-05-06 11:31:53,253 - INFO - Data Extracted - 1
+2023-05-06 11:31:53,255 - INFO - Loaded data to ./data/ic-campinas/ic_campinas-details-2023-05-06.json
+2023-05-06 11:31:53,255 - INFO - Connecting to S3
+2023-05-06 11:31:53,379 - INFO - Connected to instagram-raw
+2023-05-06 11:31:53,380 - INFO - Saving files to S3
+2023-05-06 11:31:53,577 - INFO - Saved file to S3
+2023-05-06 11:31:54,699 - INFO - Argumentos : ('posts', 'ic.campinas')
+2023-05-06 11:31:54,700 - INFO - Extracting data from https://www.instagram.com/ic.campinas/
+2023-05-06 11:32:39,011 - INFO - Data Extracted - 18
+2023-05-06 11:32:39,014 - INFO - Loaded data to ./data/ic-campinas/ic_campinas-posts-2023-05-06.json
+2023-05-06 11:32:39,014 - INFO - Connecting to S3
+2023-05-06 11:32:39,122 - INFO - Connected to instagram-raw
+2023-05-06 11:32:39,122 - INFO - Saving files to S3
+2023-05-06 11:32:39,351 - INFO - Saved file to S3
+2023-05-06 11:32:40,416 - INFO - Argumentos : ('details', 'ic.saobernardo')
+2023-05-06 11:32:40,416 - INFO - Extracting data from https://www.instagram.com/ic.saobernardo/
+2023-05-06 11:32:54,468 - INFO - Data Extracted - 1
+2023-05-06 11:32:54,469 - INFO - Loaded data to ./data/ic-saobernardo/ic_saobernardo-details-2023-05-06.json
+2023-05-06 11:32:54,469 - INFO - Connecting to S3
+2023-05-06 11:32:54,574 - INFO - Connected to instagram-raw
+2023-05-06 11:32:54,574 - INFO - Saving files to S3
+2023-05-06 11:32:54,774 - INFO - Saved file to S3
+2023-05-06 11:32:55,846 - INFO - Argumentos : ('posts', 'ic.saobernardo')
+2023-05-06 11:32:55,846 - INFO - Extracting data from https://www.instagram.com/ic.saobernardo/
+2023-05-06 11:34:17,589 - INFO - Data Extracted - 45
+2023-05-06 11:34:17,593 - INFO - Loaded data to ./data/ic-saobernardo/ic_saobernardo-posts-2023-05-06.json
+2023-05-06 11:34:17,594 - INFO - Connecting to S3
+2023-05-06 11:34:17,701 - INFO - Connected to instagram-raw
+2023-05-06 11:34:17,701 - INFO - Saving files to S3
+2023-05-06 11:34:17,959 - INFO - Saved file to S3
+2023-05-06 11:40:43,713 - INFO - Argumentos : ('details', 'ic.campinas')
+2023-05-06 11:40:43,738 - INFO - Extracting data from https://www.instagram.com/ic.campinas/
+2023-05-06 11:40:45,386 - INFO - Argumentos : ('posts', 'ic.campinas')
+2023-05-06 11:40:45,411 - INFO - Extracting data from https://www.instagram.com/ic.campinas/
+2023-05-06 11:40:47,063 - INFO - Argumentos : ('details', 'ic.saobernardo')
+2023-05-06 11:40:47,088 - INFO - Extracting data from https://www.instagram.com/ic.saobernardo/
+2023-05-06 11:40:48,736 - INFO - Argumentos : ('posts', 'ic.saobernardo')
+2023-05-06 11:40:48,761 - INFO - Extracting data from https://www.instagram.com/ic.saobernardo/
+2023-05-06 11:41:51,100 - INFO - Argumentos : ('details', 'ic.campinas')
+2023-05-06 11:41:51,100 - INFO - Extracting data from https://www.instagram.com/ic.campinas/
+2023-05-06 11:42:41,763 - INFO - Data Extracted - 1
+2023-05-06 11:42:42,814 - INFO - Argumentos : ('posts', 'ic.campinas')
+2023-05-06 11:42:42,814 - INFO - Extracting data from https://www.instagram.com/ic.campinas/
+2023-05-06 11:43:43,557 - INFO - Argumentos : ('details', 'ic.campinas')
+2023-05-06 11:43:43,557 - INFO - Extracting data from https://www.instagram.com/ic.campinas/
+2023-05-06 11:43:54,299 - INFO - Data Extracted - 1
+2023-05-06 11:43:55,359 - INFO - Argumentos : ('posts', 'ic.campinas')
+2023-05-06 11:43:55,360 - INFO - Extracting data from https://www.instagram.com/ic.campinas/
+2023-05-06 11:44:14,305 - INFO - Argumentos : ('details', 'ic.campinas')
+2023-05-06 11:44:14,305 - INFO - Extracting data from https://www.instagram.com/ic.campinas/
+2023-05-06 11:44:33,368 - INFO - Data Extracted - 1
+2023-05-06 11:44:33,369 - INFO - Loaded data to ./social-media-insights/data/ic-campinas/ic_campinas-details-2023-05-06.json
+2023-05-06 11:44:33,369 - INFO - Connecting to S3
+2023-05-06 11:44:33,489 - INFO - Connected to instagram-raw
+2023-05-06 11:44:33,489 - INFO - Saving files to S3
+2023-05-06 11:44:33,679 - INFO - Saved file to S3
+2023-05-06 11:44:34,737 - INFO - Argumentos : ('posts', 'ic.campinas')
+2023-05-06 11:44:34,737 - INFO - Extracting data from https://www.instagram.com/ic.campinas/
+2023-05-06 11:45:46,124 - INFO - Data Extracted - 18
+2023-05-06 11:45:46,126 - INFO - Loaded data to ./social-media-insights/data/ic-campinas/ic_campinas-posts-2023-05-06.json
+2023-05-06 11:45:46,126 - INFO - Connecting to S3
+2023-05-06 11:45:46,245 - INFO - Connected to instagram-raw
+2023-05-06 11:45:46,246 - INFO - Saving files to S3
+2023-05-06 11:45:46,401 - INFO - Saved file to S3
+2023-05-06 11:45:47,482 - INFO - Argumentos : ('details', 'ic.saobernardo')
+2023-05-06 11:45:47,483 - INFO - Extracting data from https://www.instagram.com/ic.saobernardo/
+2023-05-06 11:46:02,134 - INFO - Data Extracted - 1
+2023-05-06 11:46:02,135 - INFO - Loaded data to ./social-media-insights/data/ic-saobernardo/ic_saobernardo-details-2023-05-06.json
+2023-05-06 11:46:02,135 - INFO - Connecting to S3
+2023-05-06 11:46:02,242 - INFO - Connected to instagram-raw
+2023-05-06 11:46:02,242 - INFO - Saving files to S3
+2023-05-06 11:46:02,391 - INFO - Saved file to S3
+2023-05-06 11:46:03,457 - INFO - Argumentos : ('posts', 'ic.saobernardo')
+2023-05-06 11:46:03,458 - INFO - Extracting data from https://www.instagram.com/ic.saobernardo/
+2023-05-06 11:48:03,977 - INFO - Data Extracted - 45
+2023-05-06 11:48:03,981 - INFO - Loaded data to ./social-media-insights/data/ic-saobernardo/ic_saobernardo-posts-2023-05-06.json
+2023-05-06 11:48:03,981 - INFO - Connecting to S3
+2023-05-06 11:48:04,091 - INFO - Connected to instagram-raw
+2023-05-06 11:48:04,091 - INFO - Saving files to S3
+2023-05-06 11:48:04,310 - INFO - Saved file to S3
+2023-05-06 12:08:02,844 - INFO - Argumentos : ('details', 'ic.campinas')
+2023-05-06 12:08:02,844 - INFO - Extracting data from https://www.instagram.com/ic.campinas/
+2023-05-06 12:08:16,818 - INFO - Data Extracted - 1
+2023-05-06 12:08:16,819 - INFO - Loaded data to ./social-media-insights/data/ic-campinas/ic_campinas-details-2023-05-06.json
+2023-05-06 12:08:16,820 - INFO - Connecting to S3
+2023-05-06 12:08:16,927 - INFO - Connected to instagram-raw
+2023-05-06 12:08:16,927 - INFO - Saving files to S3
+2023-05-06 12:08:17,116 - INFO - Saved file to S3
+2023-05-06 12:08:18,187 - INFO - Argumentos : ('posts', 'ic.campinas')
+2023-05-06 12:08:18,187 - INFO - Extracting data from https://www.instagram.com/ic.campinas/
+2023-05-06 12:09:02,896 - INFO - Argumentos : ('details', 'ic.campinas')
+2023-05-06 12:09:02,896 - INFO - Extracting data from https://www.instagram.com/ic.campinas/
+2023-05-06 12:09:15,093 - INFO - Data Extracted - 1
+2023-05-06 12:09:15,095 - INFO - Loaded data to ./social-media-insights/data/ic-campinas/ic_campinas-details-2023-05-06.json
+2023-05-06 12:09:15,095 - INFO - Connecting to S3
+2023-05-06 12:09:15,204 - INFO - Connected to instagram-raw
+2023-05-06 12:09:15,204 - INFO - Saving files to S3
+2023-05-06 12:09:15,404 - INFO - Saved file to S3
+2023-05-06 12:09:16,580 - INFO - Argumentos : ('posts', 'ic.campinas')
+2023-05-06 12:09:16,580 - INFO - Extracting data from https://www.instagram.com/ic.campinas/
+2023-05-06 12:09:31,235 - INFO - Data Extracted - 18
+2023-05-06 12:09:31,237 - INFO - Loaded data to ./social-media-insights/data/ic-campinas/ic_campinas-posts-2023-05-06.json
+2023-05-06 12:09:31,237 - INFO - Connecting to S3
+2023-05-06 12:09:31,345 - INFO - Connected to instagram-raw
+2023-05-06 12:09:31,345 - INFO - Saving files to S3
+2023-05-06 12:09:31,502 - INFO - Saved file to S3
+2023-05-06 12:09:32,584 - INFO - Argumentos : ('details', 'ic.saobernardo')
+2023-05-06 12:09:32,584 - INFO - Extracting data from https://www.instagram.com/ic.saobernardo/
+2023-05-06 12:09:42,771 - INFO - Data Extracted - 1
+2023-05-06 12:09:42,773 - INFO - Loaded data to ./social-media-insights/data/ic-saobernardo/ic_saobernardo-details-2023-05-06.json
+2023-05-06 12:09:42,773 - INFO - Connecting to S3
+2023-05-06 12:09:42,880 - INFO - Connected to instagram-raw
+2023-05-06 12:09:42,880 - INFO - Saving files to S3
+2023-05-06 12:09:43,044 - INFO - Saved file to S3
+2023-05-06 12:09:44,118 - INFO - Argumentos : ('posts', 'ic.saobernardo')
+2023-05-06 12:09:44,119 - INFO - Extracting data from https://www.instagram.com/ic.saobernardo/
+2023-05-06 12:10:04,599 - INFO - Data Extracted - 18
+2023-05-06 12:10:04,601 - INFO - Loaded data to ./social-media-insights/data/ic-campinas/ic_campinas-posts-2023-05-06.json
+2023-05-06 12:10:04,601 - INFO - Connecting to S3
+2023-05-06 12:10:04,715 - INFO - Connected to instagram-raw
+2023-05-06 12:10:04,715 - INFO - Saving files to S3
+2023-05-06 12:10:04,886 - INFO - Saved file to S3
+2023-05-06 12:10:05,967 - INFO - Argumentos : ('details', 'ic.saobernardo')
+2023-05-06 12:10:05,967 - INFO - Extracting data from https://www.instagram.com/ic.saobernardo/
+2023-05-06 12:10:19,130 - INFO - Data Extracted - 1
+2023-05-06 12:10:19,132 - INFO - Loaded data to ./social-media-insights/data/ic-saobernardo/ic_saobernardo-details-2023-05-06.json
+2023-05-06 12:10:19,132 - INFO - Connecting to S3
+2023-05-06 12:10:19,238 - INFO - Connected to instagram-raw
+2023-05-06 12:10:19,238 - INFO - Saving files to S3
+2023-05-06 12:10:19,413 - INFO - Saved file to S3
+2023-05-06 12:10:20,481 - INFO - Argumentos : ('posts', 'ic.saobernardo')
+2023-05-06 12:10:20,482 - INFO - Extracting data from https://www.instagram.com/ic.saobernardo/
+2023-05-06 12:11:27,469 - INFO - Data Extracted - 45
+2023-05-06 12:11:27,473 - INFO - Loaded data to ./social-media-insights/data/ic-saobernardo/ic_saobernardo-posts-2023-05-06.json
+2023-05-06 12:11:27,474 - INFO - Connecting to S3
+2023-05-06 12:11:27,578 - INFO - Connected to instagram-raw
+2023-05-06 12:11:27,579 - INFO - Saving files to S3
+2023-05-06 12:11:27,799 - INFO - Saved file to S3
+2023-05-06 12:11:37,465 - INFO - Data Extracted - 45
+2023-05-06 12:11:37,469 - INFO - Loaded data to ./social-media-insights/data/ic-saobernardo/ic_saobernardo-posts-2023-05-06.json
+2023-05-06 12:11:37,469 - INFO - Connecting to S3
+2023-05-06 12:11:37,574 - INFO - Connected to instagram-raw
+2023-05-06 12:11:37,575 - INFO - Saving files to S3
+2023-05-06 12:11:37,816 - INFO - Saved file to S3
