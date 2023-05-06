@@ -1,0 +1,3 @@
+. Run script to extract data into aws ec2 using cron job
+. Save files into s3 raw
+. Run script too transform data and save grouped into s3 landing

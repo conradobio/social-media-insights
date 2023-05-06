@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  www:
+    build: .
+    env_file: 
+      - .env
+    stdin_open: true
+    tty: true
