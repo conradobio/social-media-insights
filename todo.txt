@@ -1,3 +1,4 @@
 . Run script to extract data into aws ec2 using cron job OK
 . Save files into s3 raw OK
-. Run script too transform data and save grouped into s3 landing
+. Run script too transform data and save grouped into s3 landing OK
+. Build Streamlit App
