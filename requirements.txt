@@ -1,7 +1,7 @@
-streamlit==1.18.0
+streamlit==1.22
 pandas==1.5.3
 python-dotenv==0.21.0
-boto3==1.26.129
+boto3
 apify-client==1.1.1
 streamlit_option_menu==0.3.2
 plotly==5.14.1
