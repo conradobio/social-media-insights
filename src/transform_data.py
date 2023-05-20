@@ -22,6 +22,15 @@ accounts = ['ic-campinas', 'ic-saobernardo']
 extract_types = ['details', 'posts']
 today = datetime.now().date().strftime('%Y-%m-%d')
 
+dias_semana = {'Sunday': 'Domingo',
+'Monday':'Segunda-Feira',
+'Tuesday': 'Terça-Feira', 
+'Wednesday' :'Quarta-Feira', 
+'Thursday': 'Quinta-Feira', 
+'Friday': 'Sexta-Feira', 
+'Saturday': 'Sábado', 
+}
+
 class UploadProgressPercentage(object):
 
     def __init__(self, filename):
@@ -95,7 +104,6 @@ def process_type_posts(list_files, extract_type, account, s3, raw_bucket):
                 
             posts_stats = []
             date = file.split('_')[1].split('.')[0]
-            
             for post in data:
                 link_post = post['shortCode']
                 tipo = post['type']
@@ -125,9 +133,13 @@ def drop_duplicated_rows(df):
         .sort_values(by=['uid', 'data_extracao']) \
         .reset_index(drop=True)
 
-def adjust_datetime(df):
+def adjust_datetime(df, dias_semana):
     df['data_postagem'] = pd.to_datetime(df['data_postagem'])
     df['data_extracao'] = pd.to_datetime(df['data_extracao'])
+    df['hora_postagem'] = df.data_postagem.dt.hour
+    df['dia_postagem'] = df.data_postagem.dt.day_name()
+    df['semana_postagem'] = df.data_postagem.dt.isocalendar().week
+    df = df.replace({'dia_postagem': dias_semana})
     return df
     
 def push_data_to_s3(s3, bucket_name, file_path, account, today):
@@ -173,7 +185,7 @@ if __name__ == "__main__":
             .reset_index(drop=True)  
 
         drop_df = drop_duplicated_rows(df)
-        drop_df = adjust_datetime(drop_df)
+        drop_df = adjust_datetime(drop_df, dias_semana)
         drop_df = drop_df \
                     .sort_values(by=['data_postagem', 'data_extracao']) \
                     .reset_index(drop=True) 

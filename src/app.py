@@ -3,6 +3,7 @@ from streamlit import session_state as ss
 from streamlit_option_menu import option_menu
 
 import pandas as pd
+import numpy as np
 import plotly.graph_objects as go
 import pyarrow.parquet as pq
 import s3fs
@@ -13,8 +14,8 @@ st.set_page_config(page_title="Instagram Analytics",
 
 from utils import RAW_BUCKET, ANALYTICS_BUCKET, ACCOUNTS
 from database import pull_data_from_s3, TODAY
-from plots import area_plot
-from process_data import adjust_dataframe
+from plots import area_plot, bar_plot, bar_interation_plot
+from process_data import adjust_dataframe, process_posts_df
 
 st.title("Instagram Analytics")
 
@@ -31,7 +32,7 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 # --- NAVIGATION MENU ---
 selected = option_menu(
     menu_title=None,
-    options=["Home", "Growth", "Engajamento", "Histórico"],
+    options=["Resumo", "Tipo", "Histórico"],
     icons=["house", "bar-chart-fill", "pencil-fill", "terminal"],  # https://icons.getbootstrap.com/
     orientation="horizontal",
 )
@@ -40,15 +41,21 @@ conta_insta = col1.selectbox('Selecione a conta do Instagrma:', options=ACCOUNTS
 
 st.caption(f'Dados atualizados em {TODAY}')
 
-if selected == "Home":
-    st.header(f"Home")
+# dataframes
+df = pull_data_from_s3(ANALYTICS_BUCKET, conta_insta)
+analytics_df = adjust_dataframe(df)
+
+if selected == "Resumo":
+    st.header(f"Resumo")
     st.caption('Módulo destinado a visualição dos dados de forma gráfica')
     st.write('')
     st.info(f"Você está acessando a conta **{conta_insta}**")
 
-    # dataframes
-    df = pull_data_from_s3(ANALYTICS_BUCKET, conta_insta)
-    analytics_df = adjust_dataframe(df)
+    #media posts semana
+    weekly_posts = df.query(f'data_extracao == "{TODAY}"')
+    weekly_posts_values = weekly_posts.groupby(['semana_postagem'])['uid'].count()
+    mean_weekly_posts = np.round(weekly_posts_values.mean(),2)
+    week_posts = np.round(weekly_posts_values[-1:].values,2)
 
     # kpis
     st.markdown("""
@@ -79,42 +86,57 @@ if selected == "Home":
 
     row2_1, row2_2, row2_3 = st.columns([1,1,1])
     row2_1.metric(label='Total Posts', value=analytics_df['number_posts'].iat[-1])
-    row2_2.metric(label='Posts Essa Semana', value=0)
-    row2_3.metric(label='Média Post Semanais', value=0)
+    row2_2.metric(label='Posts Essa Semana', value=week_posts)
+    row2_3.metric(label='Média Post Semanais', value=mean_weekly_posts)
 
     # charts
-    row3_1, row3_2 = st.columns(2, gap='large')
+    # seguidores por dia
+    #row3_1, row3_2 = st.columns(2, gap='large')
     seguidores_fig = area_plot(df, 'data_extracao', 'followersCount', 'Seguidores por dia', 'Seguidores')
-    row3_1.plotly_chart(seguidores_fig, theme="streamlit")
+    st.plotly_chart(seguidores_fig, theme="streamlit")
 
-    novos_seguidores_fig = area_plot(analytics_df, 'dia_analise', 'daily_followers', 'Novos Seguidores por dia', 'Novos Seguidores')
-    row3_2.plotly_chart(novos_seguidores_fig, theme="streamlit")
-
+    # taxa engajamento por dia
     engajamento_fig = area_plot(analytics_df, 'dia_analise', 'engagement_rate', 'Taxa de Engajamento por dia', 'Taxa Engajamento')
     st.plotly_chart(engajamento_fig, theme="streamlit")
+
+    # novos seguidores diários
+    novos_seguidores_fig = area_plot(analytics_df, 'dia_analise', 'daily_followers', 'Novos Seguidores por dia', 'Novos Seguidores')
+    st.plotly_chart(novos_seguidores_fig, theme="streamlit")
     
-    row5_1, row5_2 = st.columns([1,1], gap='large')
-    likes_fig = area_plot(analytics_df, 'dia_analise', 'average_likes', 'Média de Likes por Dia', 'Likes')
-    row5_1.plotly_chart(likes_fig, theme="streamlit")
+    # novos likes por dia
+    #row5_1, row5_2 = st.columns([1,1], gap='large')
+    likes_fig = area_plot(analytics_df, 'dia_analise', 'daily_likes', 'Novos Likes por Dia', 'Likes')
+    st.plotly_chart(likes_fig, theme="streamlit")
 
-    comentarios_fig = area_plot(analytics_df, 'dia_analise', 'average_comments', 'Média de Comentarios por Dia', 'Comentários')
-    row5_2.plotly_chart(comentarios_fig, theme="streamlit")
+    # novos comentários por dia
+    comentarios_fig = area_plot(analytics_df, 'dia_analise', 'daily_comments', 'Novos Comentarios por Dia', 'Comentários')
+    st.plotly_chart(comentarios_fig, theme="streamlit")
 
-
-if selected == "Growth":
-    st.header(f"Growth")
+if selected == "Tipo":
+    st.header(f"Tipo")
     st.caption('Módulo destinado a visualição dos dados de forma gráfica')
     st.write('')
-    st.info(f"Você está acessando a conta **{conta_insta}**")
+    st.info(f"Você está acessando a conta **{conta_insta}**")   
+    
+    posts_gp_df = process_posts_df(df, TODAY)
 
-if selected == "Engajamento":
-    st.header(f"Engajamento")
-    st.caption('Módulo destinado a visualição dos dados de forma gráfica')
-    st.write('')
-    st.info(f"Você está acessando a conta **{conta_insta}**")       
+    post_tipo = bar_plot(posts_gp_df, 'tipo', 'count_posts', 'Post por Tipo')
+    st.plotly_chart(post_tipo, theme="streamlit")
+
+    engagement_tipo = bar_plot(posts_gp_df, 'tipo', 'engagement_rate', 'Engajamento por Tipo - %')
+    st.plotly_chart(engagement_tipo, theme="streamlit")
+
+    tipo_interation = bar_interation_plot(posts_gp_df, 'tipo', ['mean_likes', 'mean_comments'], '')
+    st.plotly_chart(tipo_interation, theme="streamlit")
+
+    st.dataframe(posts_gp_df)
+
 
 if selected == "Histórico":
     st.header(f"Histórico")
     st.caption('Módulo destinado a visualição dos dados de forma gráfica')
     st.write('')
     st.info(f"Você está acessando a conta **{conta_insta}**")  
+
+    st.markdown('Histórico de Informações')
+    st.dataframe(analytics_df)

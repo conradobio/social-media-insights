@@ -54,4 +54,25 @@ def adjust_dataframe(df):
     analytics_df = analytics_df[analytics_df['number_followers'] != 0].reset_index(drop=True)
     analytics_df['daily_followers'] = analytics_df['number_followers'].diff()
     analytics_df['daily_followers'] = analytics_df['daily_followers'].fillna(0)
+
+    analytics_df['daily_likes'] = analytics_df['sum_likes'].diff()
+    analytics_df['daily_likes'] = analytics_df['daily_likes'].fillna(0)
+
+    analytics_df['daily_comments'] = analytics_df['sum_comments'].diff()
+    analytics_df['daily_comments'] = analytics_df['daily_comments'].fillna(0)
     return analytics_df
+
+def process_posts_df(df, dia):
+    df = df.query(f'data_extracao == "{dia}"')
+    posts_gp_df = df.groupby(['tipo']).agg(
+                            count_posts=pd.NamedAgg(column='uid', aggfunc='count'),
+                            sum_likes=pd.NamedAgg(column='qtd_likes', aggfunc=sum),
+                            sum_comments=pd.NamedAgg(column='qtd_comments', aggfunc=sum),
+                            mean_likes=pd.NamedAgg(column='qtd_likes', aggfunc='mean'),
+                            mean_comments=pd.NamedAgg(column='qtd_comments', aggfunc='mean'),
+                            ) \
+                        .reset_index()
+    posts_gp_df['mean_interations'] = posts_gp_df['mean_comments'] + posts_gp_df['mean_likes'] 
+    followers = df['followersCount'][~df['followersCount'].isna()].values
+    posts_gp_df['engagement_rate'] = (posts_gp_df['mean_interations'] / followers) * 100
+    return posts_gp_df
