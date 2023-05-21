@@ -196,3 +196,19 @@
 2023-05-20 10:54:27,063 - INFO - (963, 12)
 2023-05-20 10:54:27,075 - INFO - File saved to ./social-media-insights/data/consolidados/ic-saobernardo-consolidados_2023-05-20.parquet
 2023-05-20 10:54:27,118 - INFO - File saved to s3
+2023-05-21 04:00:02,102 - INFO - ic-campinas
+2023-05-21 04:00:02,102 - INFO - details
+2023-05-21 04:00:04,471 - INFO - (431, 9)
+2023-05-21 04:00:04,471 - INFO - posts
+2023-05-21 04:00:06,397 - INFO - (433, 8)
+2023-05-21 04:00:06,417 - INFO - (588, 12)
+2023-05-21 04:00:06,444 - INFO - File saved to ./social-media-insights/data/consolidados/ic-campinas-consolidados_2023-05-21.parquet
+2023-05-21 04:00:06,632 - INFO - File saved to s3
+2023-05-21 04:00:06,632 - INFO - ic-saobernardo
+2023-05-21 04:00:06,632 - INFO - details
+2023-05-21 04:00:08,320 - INFO - (286, 9)
+2023-05-21 04:00:08,320 - INFO - posts
+2023-05-21 04:00:10,317 - INFO - (990, 8)
+2023-05-21 04:00:10,337 - INFO - (1024, 12)
+2023-05-21 04:00:10,344 - INFO - File saved to ./social-media-insights/data/consolidados/ic-saobernardo-consolidados_2023-05-21.parquet
+2023-05-21 04:00:10,451 - INFO - File saved to s3
