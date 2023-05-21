@@ -9,8 +9,8 @@ import pyarrow.parquet as pq
 import s3fs
 from st_files_connection import FilesConnection
 
-st.set_page_config(page_title="Instagram Analytics", 
-                    layout="wide")
+st.set_page_config(page_title="Instagram Analytics", )
+                    #layout="wide")
 
 from utils import RAW_BUCKET, ANALYTICS_BUCKET, ACCOUNTS
 from database import pull_data_from_s3, TODAY

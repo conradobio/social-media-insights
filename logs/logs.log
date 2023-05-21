@@ -654,3 +654,57 @@
 2023-05-21 03:02:56,589 - INFO - Connected to instagram-raw
 2023-05-21 03:02:56,589 - INFO - Saving files to S3
 2023-05-21 03:02:56,835 - INFO - Saved file to S3
+2023-05-21 14:26:27,241 - INFO - Argumentos : ('details', 'ic.sjcampos')
+2023-05-21 14:26:27,241 - INFO - Extracting data from https://www.instagram.com/ic.sjcampos/
+2023-05-21 14:26:40,318 - INFO - Data Extracted - 1
+2023-05-21 14:26:41,528 - INFO - Argumentos : ('posts', 'ic.sjcampos')
+2023-05-21 14:26:41,528 - INFO - Extracting data from https://www.instagram.com/ic.sjcampos/
+2023-05-21 14:29:13,157 - INFO - Argumentos : ('details', 'ic.sjcampos')
+2023-05-21 14:29:13,157 - INFO - Extracting data from https://www.instagram.com/ic.sjcampos/
+2023-05-21 14:29:33,570 - INFO - Data Extracted - 1
+2023-05-21 14:29:33,571 - INFO - Loaded data to ./social-media-insights/data/ic-sjcampos/ic_sjcampos-details-2023-05-21.json
+2023-05-21 14:29:33,572 - INFO - Connecting to S3
+2023-05-21 14:29:33,818 - INFO - Connected to instagram-raw
+2023-05-21 14:29:33,818 - INFO - Saving files to S3
+2023-05-21 14:29:33,971 - INFO - Saved file to S3
+2023-05-21 14:29:35,123 - INFO - Argumentos : ('posts', 'ic.sjcampos')
+2023-05-21 14:29:35,124 - INFO - Extracting data from https://www.instagram.com/ic.sjcampos/
+2023-05-21 14:34:58,261 - INFO - Data Extracted - 61
+2023-05-21 14:34:58,267 - INFO - Loaded data to ./social-media-insights/data/ic-sjcampos/ic_sjcampos-posts-2023-05-21.json
+2023-05-21 14:34:58,268 - INFO - Connecting to S3
+2023-05-21 14:34:58,378 - INFO - Connected to instagram-raw
+2023-05-21 14:34:58,378 - INFO - Saving files to S3
+2023-05-21 14:34:58,594 - INFO - Saved file to S3
+2023-05-21 14:42:50,284 - INFO - Argumentos : ('details', 'zionsaopaulo')
+2023-05-21 14:42:50,285 - INFO - Extracting data from https://www.instagram.com/zionsaopaulo/
+2023-05-21 14:43:56,560 - INFO - Argumentos : ('details', 'zionsaopaulo')
+2023-05-21 14:43:56,561 - INFO - Extracting data from https://www.instagram.com/zionsaopaulo/
+2023-05-21 14:44:09,416 - INFO - Data Extracted - 1
+2023-05-21 14:44:10,501 - INFO - Argumentos : ('posts', 'zionsaopaulo')
+2023-05-21 14:44:10,502 - INFO - Extracting data from https://www.instagram.com/zionsaopaulo/
+2023-05-21 14:46:15,060 - INFO - Argumentos : ('details', 'zionsaopaulo')
+2023-05-21 14:46:15,060 - INFO - Extracting data from https://www.instagram.com/zionsaopaulo/
+2023-05-21 14:46:31,180 - INFO - Data Extracted - 1
+2023-05-21 14:46:31,182 - INFO - Loaded data to ./social-media-insights/data/zionsaopaulo/zionsaopaulo-details-2023-05-21.json
+2023-05-21 14:46:31,182 - INFO - Connecting to S3
+2023-05-21 14:46:31,291 - INFO - Connected to instagram-raw
+2023-05-21 14:46:31,292 - INFO - Saving files to S3
+2023-05-21 14:46:31,463 - INFO - Saved file to S3
+2023-05-21 14:46:32,574 - INFO - Argumentos : ('posts', 'zionsaopaulo')
+2023-05-21 14:46:32,575 - INFO - Extracting data from https://www.instagram.com/zionsaopaulo/
+2023-05-21 14:51:15,401 - INFO - Data Extracted - 100
+2023-05-21 14:51:15,409 - INFO - Loaded data to ./social-media-insights/data/zionsaopaulo/zionsaopaulo-posts-2023-05-21.json
+2023-05-21 14:51:15,410 - INFO - Connecting to S3
+2023-05-21 14:51:15,520 - INFO - Connected to instagram-raw
+2023-05-21 14:51:15,520 - INFO - Saving files to S3
+2023-05-21 14:51:15,771 - INFO - Saved file to S3
+2023-05-21 14:56:14,311 - INFO - Argumentos : ('details', 'ic.sjcampos')
+2023-05-21 14:56:14,312 - INFO - Extracting data from https://www.instagram.com/ic.sjcampos/
+2023-05-21 14:56:26,742 - INFO - Data Extracted - 1
+2023-05-21 14:56:26,743 - INFO - Loaded data to ./social-media-insights/data/ic-sjcampos/ic-sjcampos-details-2023-05-21.json
+2023-05-21 14:56:26,744 - INFO - Connecting to S3
+2023-05-21 14:56:26,852 - INFO - Connected to instagram-raw
+2023-05-21 14:56:26,852 - INFO - Saving files to S3
+2023-05-21 14:56:27,013 - INFO - Saved file to S3
+2023-05-21 14:56:28,128 - INFO - Argumentos : ('posts', 'ic.sjcampos')
+2023-05-21 14:56:28,130 - INFO - Extracting data from https://www.instagram.com/ic.sjcampos/

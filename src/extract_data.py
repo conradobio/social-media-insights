@@ -48,7 +48,10 @@ class UploadProgressPercentage(object):
 
 def pull_data_api(client, extract_type, account, date):
 
-    folder = account.split('.')[1]
+    if '.' in account:
+        folder = f"ic-{account.split('.')[1]}"
+    else:
+        folder = account
     url = f"https://www.instagram.com/{account}/"
 
     logging.info(f"Argumentos : {extract_type, account}")
@@ -62,7 +65,7 @@ def pull_data_api(client, extract_type, account, date):
                 "RESIDENTIAL"
             ]
         },
-        "resultsLimit": 200,
+        "resultsLimit": 100,
         "resultsType": extract_type, #details posts
         "searchLimit": 1,
         "searchType": "hashtag"
@@ -78,7 +81,7 @@ def pull_data_api(client, extract_type, account, date):
     
     logging.info(f'Data Extracted - {len(items)}')
 
-    file_path = f"./social-media-insights/data/ic-{folder}/ic_{folder}-{extract_type}-{date}.json"
+    file_path = f"./social-media-insights/data/{folder}/{folder}-{extract_type}-{date}.json"
     with open(file_path, 'w') as f:
         f.write(json.dumps(items))
     logging.info(f'Loaded data to {file_path}')

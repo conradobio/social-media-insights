@@ -212,3 +212,23 @@
 2023-05-21 04:00:10,337 - INFO - (1024, 12)
 2023-05-21 04:00:10,344 - INFO - File saved to ./social-media-insights/data/consolidados/ic-saobernardo-consolidados_2023-05-21.parquet
 2023-05-21 04:00:10,451 - INFO - File saved to s3
+2023-05-21 14:54:42,474 - INFO - ic-sjcampos
+2023-05-21 14:54:42,474 - INFO - details
+2023-05-21 14:54:42,537 - INFO - (13, 9)
+2023-05-21 14:54:42,537 - INFO - posts
+2023-05-21 14:55:07,763 - INFO - ic-sjcampos
+2023-05-21 14:55:07,764 - INFO - details
+2023-05-21 14:55:07,807 - INFO - (13, 9)
+2023-05-21 14:55:07,807 - INFO - posts
+2023-05-21 14:55:26,624 - INFO - zionsaopaulo
+2023-05-21 14:55:26,624 - INFO - details
+2023-05-21 14:55:26,664 - INFO - (13, 9)
+2023-05-21 14:55:26,665 - INFO - posts
+2023-05-21 14:55:26,770 - INFO - (100, 8)
+2023-05-21 14:55:26,785 - INFO - (101, 12)
+2023-05-21 14:55:26,828 - INFO - File saved to ./social-media-insights/data/consolidados/zionsaopaulo-consolidados_2023-05-21.parquet
+2023-05-21 14:55:27,028 - INFO - File saved to s3
+2023-05-21 14:55:52,887 - INFO - ic-sjcampos
+2023-05-21 14:55:52,887 - INFO - details
+2023-05-21 14:55:52,921 - INFO - (13, 9)
+2023-05-21 14:55:52,922 - INFO - posts
