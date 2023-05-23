@@ -6,19 +6,23 @@ import pyarrow.parquet as pq
 import s3fs
 from datetime import datetime
 
-TODAY = datetime.now().date().strftime('%Y-%m-%d')
+def get_last_file(conn, bucket, account):
+    files = conn.fs.ls(f"/{bucket}/{account}")
+    return files[-1:][0]
 
-def pull_data_from_s3(bucket, account, today=TODAY):
-    path = f'{account}/{account}_consolidado_{today}.parquet'
-    bucket_uri = f'{bucket}/{path}'
+def get_last_date(file):
+    data_str = file.split('/')[2].split('_')[2].split('.')[0]
+    return datetime.strptime(data_str, "%Y-%m-%d").date()
 
-    conn = st.experimental_connection('s3', type=FilesConnection)
-    return conn.read(bucket_uri, input_format="parquet", ttl=600)
+def connect_database():
+    return st.experimental_connection('s3', type=FilesConnection)
 
-    # fs = s3fs.S3FileSystem()
-    # path = f'{account}/{account}_consolidado_{today}.parquet'
-    # bucket_uri = f's3://{bucket}/{path}/'
-    
-    # dataset = pq.ParquetDataset(bucket_uri, filesystem=fs)
-    # table = dataset.read()
-    # return table.to_pandas() 
+def pull_data_from_s3(bucket, account):
+    conn = connect_database()
+    file_name = get_last_file(conn, bucket, account)
+    data = get_last_date(file_name)
+
+    bucket_uri = f's3://{file_name}/'
+
+    return conn.read(bucket_uri, input_format="parquet", ttl=600), data
+

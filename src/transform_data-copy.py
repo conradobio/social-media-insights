@@ -105,23 +105,26 @@ def process_type_posts(list_files, extract_type, account, s3, raw_bucket):
             posts_stats = []
             date = file.split('_')[1].split('.')[0]
             for post in data:
-                link_post = post['shortCode']
-                tipo = post['type']
-                data_postagem = post['timestamp']
-                qtd_comments = post['commentsCount']
-                qtd_likes = post['likesCount']
-                legenda = post['caption']
-                hashtags = post['hashtags']
-                
-                posts_stats.append(dict(uid=link_post,
-                                        tipo=tipo,
-                                        data_postagem=data_postagem, 
-                                        legenda=legenda,
-                                        qtd_likes=qtd_likes,
-                                        qtd_comments=qtd_comments,
-                                        hashtags=hashtags,
-                                        data_extracao=date
-                                        ))
+                try:
+                    link_post = post['shortCode']
+                    tipo = post['type']
+                    data_postagem = post['timestamp']
+                    qtd_comments = post['commentsCount']
+                    qtd_likes = post['likesCount']
+                    legenda = post['caption']
+                    hashtags = post['hashtags']
+                    
+                    posts_stats.append(dict(uid=link_post,
+                                            tipo=tipo,
+                                            data_postagem=data_postagem, 
+                                            legenda=legenda,
+                                            qtd_likes=qtd_likes,
+                                            qtd_comments=qtd_comments,
+                                            hashtags=hashtags,
+                                            data_extracao=date
+                                            ))
+                except:
+                    pass
             
             tmp_df = pd.DataFrame(posts_stats)
 

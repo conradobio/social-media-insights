@@ -13,7 +13,7 @@ st.set_page_config(page_title="Instagram Analytics", )
                     #layout="wide")
 
 from utils import RAW_BUCKET, ANALYTICS_BUCKET, ACCOUNTS
-from database import pull_data_from_s3, TODAY
+from database import pull_data_from_s3
 from plots import area_plot, bar_plot, bar_interation_plot
 from process_data import adjust_dataframe, process_posts_df
 
@@ -39,10 +39,11 @@ selected = option_menu(
 col1, _, _ = st.columns(3)
 conta_insta = col1.selectbox('Selecione a conta do Instagrma:', options=ACCOUNTS)
 
-st.caption(f'Dados atualizados em {TODAY}')
 
 # dataframes
-df = pull_data_from_s3(ANALYTICS_BUCKET, conta_insta)
+df, data = pull_data_from_s3(ANALYTICS_BUCKET, conta_insta)
+st.caption(f'Dados atualizados em {data}')
+
 analytics_df = adjust_dataframe(df)
 
 if selected == "Resumo":
@@ -52,7 +53,7 @@ if selected == "Resumo":
     st.info(f"Você está acessando a conta **{conta_insta}**")
 
     #media posts semana
-    weekly_posts = df.query(f'data_extracao == "{TODAY}"')
+    weekly_posts = df.query(f'data_extracao == "{data}"')
     weekly_posts_values = weekly_posts.groupby(['semana_postagem'])['uid'].count()
     mean_weekly_posts = np.round(weekly_posts_values.mean(),2)
     week_posts = np.round(weekly_posts_values[-1:].values,2)
@@ -118,7 +119,7 @@ if selected == "Tipo":
     st.write('')
     st.info(f"Você está acessando a conta **{conta_insta}**")   
     
-    posts_gp_df = process_posts_df(df, TODAY)
+    posts_gp_df = process_posts_df(df, data)
 
     post_tipo = bar_plot(posts_gp_df, 'tipo', 'count_posts', 'Post por Tipo')
     st.plotly_chart(post_tipo, theme="streamlit")
